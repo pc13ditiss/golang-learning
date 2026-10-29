@@ -34,4 +34,15 @@
     slice := make([]<data-type>, length, capacity)
     slice := make([]int, 5 ,10)
 
-  capacity work in arrays as well. but in arrays teh capacityis equal to th elength of an arrat\y
+  capacity work in arrays as well. but in arrays teh capacityis equal to th elength of an array
+
+  The Rule of copy
+The built-in copy(destination, source) function does something very specific: it returns the number of elements it actually copied.
+
+To decide how many elements to copy, Go looks at the lengths of both slices and takes the smaller length:
+
+Length of source (arr) = 5
+
+Length of destination (slice) = 10
+
+Since the smaller length is 5, Go can only copy 5 elements over. Even though your destination slice had room for 10, the source slice ran out of items after 5.

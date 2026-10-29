@@ -1,0 +1,37 @@
+  - Slice :  it is defined as the contiguous segment of underlying array. 
+   and it provides to a numbered sequence of elements from that array.
+   so as such, slices provides access to parts parts of an array in sequential order
+
+  - slices are more felxible and more powerful than arrays, since array had a limitation that are of fixed type
+  - slices are variabled-sized i.e. you can add or remove elements from a slice. 
+    due to this, it offers more flexibility than arrays.
+
+  - slice has 3 major components:-  pointer, length and capacity  
+    Pointer - it is usedd to point the first element in the array, that is accessible through that slice.
+	          not necessary that the pointed element is the first element in the array. 
+			      pointers are the variables that hold the memory address. 
+
+            len() for finding the length funcition
+            cap() for finding the capacity of funcition
+   
+   - no need to specify the size of the slice
+   - structure of the slice 
+      1. name of the slice
+      2. shorthand operator :=
+      3. empty square brackets since we do not want to specify thw size []
+      4. data types
+      5. the values inside the curly brackets {}
+
+      example ---->   grades := []int{40, 50, 45}
+
+  - core concept of slice is being refrenced to the array.
+  - to create a slice we have a array start index which is included, and we have end index which is not included. 
+    array[start_index : end_index]
+    array[0 : 3]        // start from zero by default till 0,1,2 indices is sliced
+    array [0 : 0]       // complete array is sliced
+
+  - make fucntion is used to create an empty slice
+    slice := make([]<data-type>, length, capacity)
+    slice := make([]int, 5 ,10)
+
+  capacity work in arrays as well. but in arrays teh capacityis equal to th elength of an arrat\y
